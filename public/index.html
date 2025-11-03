@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Binary Sniper God — Ultimate</title>
+  <style>
+    body{background:#030417;color:#e6f7ff;font-family:Inter,system-ui,Roboto,Arial;margin:0;padding:18px;}
+    .wrap{max-width:1100px;margin:0 auto;}
+    header{display:flex;justify-content:space-between;align-items:center}
+    h1{color:#00e7ff;margin:0}
+    .controls{margin-top:18px}
+    select,button{padding:10px 14px;margin-right:8px;border-radius:10px;border:0;font-weight:700}
+    button.start{background:linear-gradient(90deg,#00e7ff,#38bdf8);color:#012}
+    button.next{background:linear-gradient(90deg,#ffd166,#ff7a7a);color:#012}
+    button.auto{background:#7c3aed;color:#fff}
+    .panel{margin-top:18px;padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(0,0,0,0.06));box-shadow:0 10px 40px rgba(2,6,23,0.6)}
+    .signalTitle{font-size:20px;font-weight:800;color:#ffd54a}
+    ul.analysis{margin:6px 0 0 20px}
+    .confidence{font-weight:800;color:#7af9b8}
+    .count{margin-top:12px;font-size:18px;color:#ff9b9b}
+    .log{margin-top:12px;max-height:260px;overflow:auto;padding:8px;border-radius:8px;background:#011222}
+    .owner{font-size:12px;color:#9fb4c7}
+    option[disabled]{font-weight:800;color:#a8c0d0}
+    .gauge{width:120px;height:120px;border-radius:50%;background:radial-gradient(circle at 30% 30%, rgba(255,255,255,0.03), transparent);display:inline-block;vertical-align:middle;margin-right:12px}
+    .spark{width:300px;height:100px;display:inline-block}
+    .meta{font-size:13px;color:#bfefff;margin-top:8px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Binary Sniper God — Ultimate</h1>
+        <div class="owner">Owner: David Mamun William</div>
+      </div>
+      <div>
+        <small>Auto-learn • Auto-heal • Multi-TF • News filter • AI optimizer</small>
+      </div>
+    </header>
+
+    <div class="controls">
+      <select id="pairSelect"></select>
+      <button class="start" id="startBtn">Start</button>
+      <button class="next" id="nextBtn">Next</button>
+      <button class="auto" id="autoBtn">Auto-Pick Best</button>
+      <button id="ttsBtn">🔊 TTS</button>
+    </div>
+
+    <div class="panel" id="signalPanel">
+      <div id="signalTitle">No signal yet — press Start or Auto-Pick</div>
+      <div style="display:flex;align-items:center;">
+        <div class="gauge" id="gauge"> </div>
+        <canvas id="spark" class="spark" width="300" height="100"></canvas>
+      </div>
+      <div id="signalBody"></div>
+      <div id="signalTimes" class="meta"></div>
+      <div id="countdown" class="count"></div>
+    </div>
+
+    <div class="panel log" id="logBox"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+        </html>
