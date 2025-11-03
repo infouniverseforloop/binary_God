@@ -1,0 +1,15 @@
+{
+  "name": "binary-sniper-god",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "ws": "^8.13.0",
+    "node-fetch": "^2.6.7",
+    "axios": "^1.4.0"
+  }
+}
